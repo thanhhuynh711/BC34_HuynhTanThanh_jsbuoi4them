@@ -289,6 +289,8 @@ document.getElementById("kiemTraSo").onclick = function () {
     sum = number1 + " trăm " + number2 + " ngươi ";
   } else if (num2 === 0) {
     sum = number1 + " trăm " + "lẻ " + number3;
+  } else if (num2 === 1) {
+    sum = number1 + " trăm " + "mười " + number3;
   } else {
     sum = number1 + " trăm " + number2 + " ngươi " + number3;
   }
