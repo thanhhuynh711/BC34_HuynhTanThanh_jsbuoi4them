@@ -217,7 +217,7 @@ document.getElementById("kiemTraSo").onclick = function () {
   var number2 = num2;
   switch (num2) {
     case 0:
-      confirm("Số hàng chục không sác định");
+      number2 = "lẻ";
       break;
     case 1:
       number2 = "một";
@@ -287,9 +287,45 @@ document.getElementById("kiemTraSo").onclick = function () {
     sum = number2 + " ngươi " + number3;
   } else if (num3 === 0) {
     sum = number1 + " trăm " + number2 + " ngươi ";
+  } else if (num2 === 0) {
+    sum = number1 + " trăm " + "lẻ " + number3;
   } else {
     sum = number1 + " trăm " + number2 + " ngươi " + number3;
   }
   //   Đầu ra
   document.getElementById("ketQua3").innerHTML = sum;
+};
+
+// Bài tập 4
+
+document.getElementById("tinhSV").onclick = function () {
+  // Đầu vào
+  var tenSV1 = document.getElementById("tenSV1").value;
+  var x1 = document.getElementById("x1").value * 1;
+  var y1 = document.getElementById("y1").value * 1;
+  var tenSV2 = document.getElementById("tenSV2").value;
+  var x2 = document.getElementById("x2").value * 1;
+  var y2 = document.getElementById("y2").value * 1;
+  var tenSV3 = document.getElementById("tenSV3").value;
+  var x3 = document.getElementById("x3").value * 1;
+  var y3 = document.getElementById("y3").value * 1;
+  var x4 = document.getElementById("x4").value * 1;
+  var y4 = document.getElementById("y4").value * 1;
+  // Xử lý
+  var sv1 = Math.pow(x1 - x4, 2) + Math.pow(y1 - y4, 2);
+  var sv2 = Math.pow(x2 - x4, 2) + Math.pow(y2 - y4, 2);
+  var sv3 = Math.pow(x3 - x4, 2) + Math.pow(y3 - y4, 2);
+
+  var svXaNhat;
+  if (sv1 > sv2 && sv1 > sv3) {
+    svXaNhat = "Sinh viên xa trường nhất: " + tenSV1;
+  } else if (sv2 > sv1 && sv2 > sv3) {
+    svXaNhat = "Sinh viên xa trường nhất: " + tenSV2;
+  } else if (sv3 > sv1 && sv3 > sv2) {
+    svXaNhat = "Sinh viên xa trường nhất: " + tenSV3;
+  } else {
+    confirm("Vui lòng nhập số");
+  }
+  // Đầu ra
+  document.getElementById("thongBaoSV").innerHTML = svXaNhat;
 };

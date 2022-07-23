@@ -19,11 +19,11 @@
   </head>
   <body>
     <!-- Bài 1 -->
-    <div class="container">
+    <div style="width: 700px" class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col">
           <div class="card">
-            <div class="card-header">Bài tập 1</div>
+            <div class="card-header">Bài tập 1: Tính ngày tháng năm</div>
             <div class="card-body">
               <div class="form-group">
                 <label>ngày</label>
@@ -51,11 +51,11 @@
     </div>
     <hr />
     <!-- Bài 2 -->
-    <div class="container">
+    <div style="width: 700px" class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col">
           <div class="card">
-            <div class="card-header">Bài tập 2</div>
+            <div class="card-header">Bài tập 2: Tính ngày</div>
             <div class="card-body">
               <div class="form-group">
                 <label>Tháng</label>
@@ -76,11 +76,11 @@
     </div>
     <hr />
     <!-- Bài 3 -->
-    <div class="container">
+    <div style="width: 700px" class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col">
           <div class="card">
-            <div class="card-header">Bài tập 3</div>
+            <div class="card-header">Bài tập 3: Đọc số</div>
             <div class="card-body">
               <div class="form-group">
                 <label>Number</label>
@@ -95,7 +95,139 @@
         </div>
       </div>
     </div>
-
+    <!-- Bài tập 4 -->
+    <hr />
+    <div style="width: 700px" class="container">
+      <div class="card">
+        <div class="card-header">Bài tập 4: Tìm sinh viên xa trường nhất</div>
+        <div class="card-body">
+          <div class="row">
+            <h3>Sinh viên 1</h3>
+            <div class="col-md-4">
+              <div class="form-group mt-2">
+                <input
+                  placeholder="Nhập tên"
+                  id="tenSV1"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group mt-2">
+                <input
+                  placeholder="Nhập tòa độ x"
+                  id="x1"
+                  type="number"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group mt-2">
+                <input
+                  placeholder="Nhập tòa độ y"
+                  id="y1"
+                  type="number"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <h3>Sinh viên 2</h3>
+            <div class="col-md-4">
+              <div class="form-group mt-2">
+                <input
+                  placeholder="Nhập tên"
+                  id="tenSV2"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group mt-2">
+                <input
+                  placeholder="Tòa độ x"
+                  id="x2"
+                  type="number"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group mt-2">
+                <input
+                  placeholder="Nhập tòa độ y"
+                  id="y2"
+                  type="number"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <h3>Sinh viên 3</h3>
+            <div class="col-md-4">
+              <div class="form-group mt-2">
+                <input
+                  placeholder="Nhập tên"
+                  id="tenSV3"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group mt-2">
+                <input
+                  placeholder="Nhập tóa độ x"
+                  id="x3"
+                  type="number"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group mt-2">
+                <input
+                  placeholder="Nhập tòa độ y"
+                  id="y3"
+                  type="number"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <h3>Trường học</h3>
+            <div class="col-md-4">
+              <div class="form-group mt-2">
+                <input
+                  placeholder="Nhập tòa độ x"
+                  id="x4"
+                  type="number"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group mt-2">
+                <input
+                  placeholder="Nhập tòa độ y"
+                  id="y4"
+                  type="number"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-success mt-4" id="tinhSV">Tìm</button>
+        </div>
+        <div class="card-footer text-muted" id="thongBaoSV"></div>
+      </div>
+    </div>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
