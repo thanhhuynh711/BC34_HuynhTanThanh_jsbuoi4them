@@ -181,6 +181,9 @@ document.getElementById("kiemTraSo").onclick = function () {
 
   var number1 = num1;
   switch (num1) {
+    case 0:
+      confirm("số hàng trăm không sác định");
+      break;
     case 1:
       number1 = "một";
       break;
@@ -213,6 +216,9 @@ document.getElementById("kiemTraSo").onclick = function () {
   }
   var number2 = num2;
   switch (num2) {
+    case 0:
+      confirm("Số hàng chục không sác định");
+      break;
     case 1:
       number2 = "một";
       break;
@@ -276,7 +282,14 @@ document.getElementById("kiemTraSo").onclick = function () {
       number3 = "vui lòng nhập số có 3 chữ số";
   }
 
-  var sum = number1 + " trăm " + number2 + " ngươi " + number3;
+  var sum;
+  if (num1 === 0) {
+    sum = number2 + " ngươi " + number3;
+  } else if (num3 === 0) {
+    sum = number1 + " trăm " + number2 + " ngươi ";
+  } else {
+    sum = number1 + " trăm " + number2 + " ngươi " + number3;
+  }
   //   Đầu ra
   document.getElementById("ketQua3").innerHTML = sum;
 };
