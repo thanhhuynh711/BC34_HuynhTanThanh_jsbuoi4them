@@ -80,68 +80,55 @@ document.getElementById("ngayHomSau").onclick = function () {
     ngayMoi = ++ngay;
   }
 
-  var thangSau;
-  if (
-    (ngayMoi === 32 && month === 1) ||
-    (ngayMoi === 32 && month === 3) ||
-    (ngayMoi === 31 && month === 4) ||
-    (ngayMoi === 32 && month === 5) ||
-    (ngayMoi === 31 && month === 6) ||
-    (ngayMoi === 32 && month === 7) ||
-    (ngayMoi === 32 && month === 8) ||
-    (ngayMoi === 31 && month === 9) ||
-    (ngayMoi === 32 && month === 10) ||
-    (ngayMoi === 31 && month === 11)
-  ) {
-    thangSau = ++month;
-  } else {
-    thangSau = month;
-  }
-
   var monthNew;
   var dayNew;
   var yearNew;
 
-  if (ngayMoi === 32 && thangSau === 1) {
+  if (ngayMoi === 32 && month === 1) {
+    dayNew = 1;
+    monthNew = ++month;
+  } else if (ngayMoi === 29 && month === 2) {
     dayNew = "1";
-    monthNew = "2";
-  } else if (ngayMoi >= 29 && thangSau === 2) {
+    monthNew = ++month;
+  } else if (ngayMoi === 32 && month === 3) {
     dayNew = "1";
-    monthNew = "3";
-  } else if (ngayMoi === 32 && thangSau === 3) {
+    monthNew = ++month;
+  } else if (ngayMoi === 31 && month === 4) {
     dayNew = "1";
-    monthNew = "4";
-  } else if (ngayMoi === 31 && thangSau === 4) {
+    monthNew = ++month;
+  } else if (ngayMoi === 32 && month === 5) {
     dayNew = "1";
-    monthNew = "5";
-  } else if (ngayMoi === 32 && thangSau === 5) {
-    dayNew = "1";
-    monthNew = "6";
-  } else if (ngayMoi === 31 && thangSau === 6) {
+    monthNew = ++month;
+  } else if (ngayMoi === 31 && month === 6) {
     dayNew = "7";
-    monthNew = "3";
-  } else if (ngayMoi === 32 && thangSau === 7) {
+    monthNew = ++month;
+  } else if (ngayMoi === 32 && month === 7) {
     dayNew = "1";
-    monthNew = "8";
-  } else if (ngayMoi === 32 && thangSau === 8) {
+    monthNew = ++month;
+  } else if (ngayMoi === 32 && month === 8) {
     dayNew = "1";
-    monthNew = "9";
-  } else if (ngayMoi === 31 && thangSau === 9) {
+    monthNew = ++month;
+  } else if (ngayMoi === 31 && month === 9) {
     dayNew = "1";
-    monthNew = "10";
-  } else if (ngayMoi === 32 && thangSau === 10) {
+    monthNew = ++month;
+  } else if (ngayMoi === 32 && month === 10) {
     dayNew = "1";
-    monthNew = "11";
-  } else if (ngayMoi === 31 && thangSau === 11) {
+    monthNew = ++month;
+  } else if (ngayMoi === 31 && month === 11) {
     dayNew = "1";
-    monthNew = "12";
-  } else if (ngayMoi >= 32 && thangSau === 12) {
+    monthNew = ++month;
+  } else if (ngayMoi >= 32 && month === 12) {
     dayNew = "1";
     monthNew = "1";
     yearNew = ++year;
-  } else {
-    monthNew = thangSau;
+  } else if (ngayMoi <= 31 && month !== 2) {
+    monthNew = month;
     dayNew = ngayMoi;
+  } else if (ngayMoi <= 29 && month === 2) {
+    monthNew = month;
+    dayNew = ngayMoi;
+  } else {
+    confirm("vui long nhập ngày khác");
   }
 
   var xemNgayMoi = dayNew + "/" + monthNew + "/" + year;
@@ -206,8 +193,23 @@ document.getElementById("kiemTraSo").onclick = function () {
     case 4:
       number1 = "bốn";
       break;
+    case 5:
+      number1 = "năm";
+      break;
+    case 6:
+      number1 = "sáu";
+      break;
+    case 7:
+      number1 = "bảy";
+      break;
+    case 8:
+      number1 = "tám";
+      break;
+    case 9:
+      number1 = "chín";
+      break;
     default:
-      number1 = "ai vậy?";
+      number1 = "vui lòng nhập số có 3 chữ số";
   }
   var number2 = num2;
   switch (num2) {
@@ -223,8 +225,23 @@ document.getElementById("kiemTraSo").onclick = function () {
     case 4:
       number2 = "bốn";
       break;
+    case 5:
+      number2 = "năm";
+      break;
+    case 6:
+      number2 = "sáu";
+      break;
+    case 7:
+      number2 = "bảy";
+      break;
+    case 8:
+      number2 = "tám";
+      break;
+    case 9:
+      number2 = "chín";
+      break;
     default:
-      number2 = "ai vậy?";
+      number2 = "vui lòng nhập số có 3 chữ số";
   }
   var number3 = num3;
   switch (num3) {
@@ -240,8 +257,23 @@ document.getElementById("kiemTraSo").onclick = function () {
     case 4:
       number3 = "bốn";
       break;
+    case 5:
+      number3 = "năm";
+      break;
+    case 6:
+      number3 = "sáu";
+      break;
+    case 7:
+      number3 = "bảy";
+      break;
+    case 8:
+      number3 = "tám";
+      break;
+    case 9:
+      number3 = "chín";
+      break;
     default:
-      number3 = "ai vậy?";
+      number3 = "vui lòng nhập số có 3 chữ số";
   }
 
   var sum = number1 + " trăm " + number2 + " ngươi " + number3;
